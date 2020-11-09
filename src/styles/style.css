@@ -1,1 +1,28 @@
 /** CSS STYLE **/
+:root {
+  --white-color: #fff;
+  --translucent-white-color: #d7ccc0;
+  --light-color: #d7ccc0;
+  --main-light-color: #fe8a02;
+  --main-dark-color: #42413c;
+  --dark-color: #2a2626;
+  --translucent-dark-color: #908d8b;
+  --brown-color: #b09a81;
+  --blue-color: #1085c5;
+  --font-neucha: 'Neucha', cursive;
+  --font-open-sans: 'Open Sans', sans-serif;
+  --font-size-main: 16px;
+  --line-height-main: 1.6em;
+  --line-height-title: 1.2em;
+  --font-color: #2a2626;
+  --font-size-h1: 72px;
+  --font-size-h2: 60px;
+  --font-sixe-h3: 34px;
+  --max-width: 1100px;
+  --padding-top-bottom: 100px;
+}
+
+body {
+  font-family: sans-serif;
+  font-family: var(--font-open-sans);
+}
