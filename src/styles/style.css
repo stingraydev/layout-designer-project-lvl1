@@ -1,7 +1,7 @@
-/** CSS STYLE **/
 :root {
   --white-color: #fff;
   --translucent-white-color: #d7ccc0;
+  --background-light-color: #f5f4f0;
   --light-color: #d7ccc0;
   --main-light-color: #fe8a02;
   --main-dark-color: #42413c;
@@ -22,7 +22,122 @@
   --padding-top-bottom: 100px;
 }
 
+html {
+  font-size: var(--font-size-main);
+}
+
 body {
+  color: var(--font-color);
+  font-weight: 400;
   font-family: sans-serif;
   font-family: var(--font-open-sans);
+  line-height: var(--line-height-main);
+}
+
+p,
+h1,
+h2,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--padding-top-bottom) 0;
+}
+
+header::before,
+section:not(.about)::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 0.1;
+
+  content: '';
+}
+
+.background-light {
+  background-color: var(--background-light-color);
+}
+
+.font-orange {
+  color: var(--main-light-color);
+}
+
+.font-neucha {
+  font-family: var(--font-neucha);
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+
+  font-weight: normal;
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-title);
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.z-index-10 {
+  z-index: 10;
+}
+
+.header img {
+  top: 55px;
+  right: -270px;
+}
+
+.flex {
+  display: flex;
+}
+
+.text-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 14rem;
+}
+
+.text-block p {
+  max-width: 33.75rem;
+}
+
+.right-block p:nth-child(2) {
+  margin-top: 1.875rem;
+}
+
+.link {
+  display: inline-block;
+
+  padding: 11px 24px;
+
+  color: var(--white-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.link-orange {
+  background-color: var(--main-light-color);
+}
+
+.right-block .link {
+  justify-self: start;
+  margin-top: 2.375rem;
 }
