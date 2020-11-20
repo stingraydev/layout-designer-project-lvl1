@@ -1,5 +1,6 @@
 :root {
   --white-color: #fff;
+  --black-color: #000;
   --translucent-white-color: #d7ccc0;
   --background-light-color: #f5f4f0;
   --light-color: #d7ccc0;
@@ -18,6 +19,7 @@
   --font-size-h1: 72px;
   --font-size-h2: 60px;
   --font-size-h3: 34px;
+  --fonr-size-h4: 36px;
   --max-width: 1100px;
   --padding-top-bottom: 100px;
   --dark-text-color: #212529;
@@ -100,6 +102,10 @@ header::before,
   font-family: var(--font-neucha);
 }
 
+.font-sans {
+  font-family: var(--font-open-sans);
+}
+
 .title-h1 {
   font-size: var(--font-size-h1);
   line-height: var(--line-height-title);
@@ -161,6 +167,12 @@ header::before,
 
 .link-orange {
   background-color: var(--main-light-color);
+
+  transition: all 0.2s ease;
+}
+
+.link-orange:hover {
+  background-color: #ea7600;
 }
 
 .right-block .link {
@@ -202,7 +214,7 @@ header::before,
   filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
 }
 
-/* Блок five-cognitives */
+/* Блок Five-cognitives */
 
 .five-cognitives {
   padding-top: 100px;
@@ -239,6 +251,8 @@ header::before,
 
   background-color: var(--background-light-color);
   cursor: pointer;
+
+  transition: all 0.2s ease;
 }
 
 .pb-38 {
@@ -277,9 +291,11 @@ header::before,
 .item-link:hover .item-description,
 .item-link:hover .menu-h3 {
   color: var(--white-color);
+
+  transition: all 0.2s ease;
 }
 
-/* Секции когнитивных искажений */
+/* Блок когнитивных искажений */
 
 .main-block {
   display: flex;
@@ -349,4 +365,126 @@ header::before,
 .depreciation .text-block,
 .depreciation .title-block > p {
   color: var(--white-color);
+}
+
+/* Блок subscription */
+
+.subscription {
+  display: flex;
+  justify-content: space-between;
+  padding: 43px 75px 41px 52px;
+
+  color: var(--white-color);
+
+  background-color: var(--main-dark-color);
+}
+
+.subscription h4 {
+  font-weight: 400;
+  font-size: var(--fonr-size-h4);
+  line-height: 43.2px;
+}
+
+.subscription label {
+  display: block;
+
+  font-weight: 700;
+  line-height: 28.8px;
+}
+
+.subscription a {
+  color: var(--white-color);
+}
+
+.form-block .text {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 19.2px;
+}
+
+input[type="mail"] {
+  box-sizing: border-box;
+  width: 400px;
+  height: 50px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 15px;
+
+  border: none;
+}
+
+input[type="mail"]::placeholder {
+
+  color: var(-black-color);
+  font-size: 18px;
+  line-height: 28.8px;
+
+  opacity: 0.2;
+}
+
+input[type="submit"] {
+  box-sizing: border-box;
+
+  width: 70px;
+  height: 50px;
+
+  vertical-align: bottom;
+
+  background-color: var(--main-light-color);
+  border: none;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #ea7600;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.label-submit {
+  position: relative;
+
+  display: block;
+  width: 70px;
+  height: 50px;
+}
+
+.label-submit::before {
+  position: absolute;
+  top: 14px;
+  right: 26px;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+
+  content: url(../images/send.svg);
+}
+
+.signature {
+  margin-top: 60px;
+
+  color: var(--black-color);
+  font-size: 14px;
+  line-height: 22.4px;
+  text-align: center;
+}
+
+.signature a {
+  color: var(--blue-color);
+}
+
+.author,
+.material {
+  margin-bottom: 16px;
 }
