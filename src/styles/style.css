@@ -2,9 +2,9 @@
   --white-color: #fff;
   --black-color: #000;
   --translucent-white-color: #d7ccc0;
-  --background-light-color: #f5f4f0;
+  --super-light-color: #f5f4f0;
   --light-color: #d7ccc0;
-  --main-light-color: #fe8a02;
+  --orange-color: #fe8a02;
   --main-dark-color: #42413c;
   --dark-color: #2a2626;
   --translucent-dark-color: #908d8b;
@@ -57,9 +57,19 @@ body {
   padding: 0;
 
   font-weight: normal;
+  font-size: var(--font-size-h2);
+  line-height: 66px;
+}
+
+.flex {
+  display: flex;
 }
 
 /* Блок Header */
+
+header {
+  overflow-x: hidden;
+}
 
 header::before,
 .effect-ikea::before,
@@ -72,9 +82,11 @@ header::before,
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: -10;
 
   background: url(../images/background.png);
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
 
   opacity: 0.1;
@@ -82,8 +94,23 @@ header::before,
   content: '';
 }
 
-.background-light {
-  background-color: var(--background-light-color);
+header::after,
+.effect-ikea::after,
+.optimization::after,
+.distortion::after,
+.depreciation::after,
+.error-planning::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -20;
+
+  background-color: var(--super-light-color);
+  background-position: center center;
+
+  content: '';
 }
 
 .background-white {
@@ -95,7 +122,7 @@ header::before,
 }
 
 .font-orange {
-  color: var(--main-light-color);
+  color: var(--orange-color);
 }
 
 .font-neucha {
@@ -123,26 +150,17 @@ header::before,
   z-index: 10;
 }
 
-.z-index--10 {
-  z-index: -10;
-}
-
 .header img {
   top: 55px;
   right: -270px;
 }
 
-.flex {
-  display: flex;
-}
-
 .text-block {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.header .text-block {
+.mt-14rem {
   margin-top: 14rem;
 }
 
@@ -166,7 +184,7 @@ header::before,
 }
 
 .link-orange {
-  background-color: var(--main-light-color);
+  background-color: var(--orange-color);
 
   transition: all 0.2s ease;
 }
@@ -184,11 +202,6 @@ header::before,
 
 .about {
   margin-bottom: -200px;
-}
-
-.title-h2 {
-  font-size: var(--font-size-h2);
-  line-height: 66px;
 }
 
 .text-align-center {
@@ -249,7 +262,7 @@ header::before,
 
   text-decoration: none;
 
-  background-color: var(--background-light-color);
+  background-color: var(--super-light-color);
   cursor: pointer;
 
   transition: all 0.2s ease;
@@ -279,12 +292,8 @@ header::before,
   line-height: 40.8px;
 }
 
-.five-cognitives .title-h3 {
-  color: var(--main-light-color);
-}
-
 .item-link:hover {
-  background-color: var(--main-light-color);
+  background-color: var(--orange-color);
 }
 
 .item-link:hover .item-number,
@@ -297,15 +306,11 @@ header::before,
 
 /* Блок когнитивных искажений */
 
-.main-block {
-  display: flex;
-}
-
 .jc-sb {
   justify-content: space-between;
 }
 
-.how-apparent {
+.how-it-works {
   margin-top: 100px;
   margin-bottom: 20px;
   padding: 4px 0 4px 8px;
@@ -319,14 +324,10 @@ header::before,
   background-color: var(--brown-color);
 }
 
-.how-apparent-white {
+.how-it-works-white {
   color: var(--main-dark-color);
 
   background-color: var(--white-color);
-}
-
-.effect-ikea .text-block {
-  display: flex;
 }
 
 .ml-31 {
@@ -430,7 +431,7 @@ input[type="submit"] {
 
   vertical-align: bottom;
 
-  background-color: var(--main-light-color);
+  background-color: var(--orange-color);
   border: none;
   cursor: pointer;
 
