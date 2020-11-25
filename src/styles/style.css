@@ -156,8 +156,18 @@ header::after,
 }
 
 .text-block {
+  height: 154px;
+  overflow: hidden;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.text-block p:nth-child(1) {
+  flex-grow: 9999;
+}
+
+.text-block p:nth-child(2) {
+  flex-grow: 1;
 }
 
 .mt-14rem {
@@ -165,7 +175,8 @@ header::after,
 }
 
 .text-block p {
-  max-width: 33.75rem;
+  height: 154px;
+  flex-basis: 33.75rem;
 }
 
 .right-block p:nth-child(2) {
