@@ -1,9 +1,9 @@
+/* Main styles and atomic class */
+
 :root {
   --white-color: #fff;
   --black-color: #000;
-  --translucent-white-color: #d7ccc0;
   --super-light-color: #f5f4f0;
-  --light-color: #d7ccc0;
   --orange-color: #fe8a02;
   --main-dark-color: #42413c;
   --dark-color: #2a2626;
@@ -19,7 +19,7 @@
   --font-size-h1: 72px;
   --font-size-h2: 60px;
   --font-size-h3: 34px;
-  --fonr-size-h4: 36px;
+  --font-size-h4: 36px;
   --max-width: 1100px;
   --padding-top-bottom: 100px;
   --dark-text-color: #212529;
@@ -33,7 +33,6 @@ html {
 body {
   color: var(--font-color);
   font-weight: 400;
-  font-family: sans-serif;
   font-family: var(--font-open-sans);
   line-height: var(--line-height-main);
 }
@@ -52,23 +51,16 @@ body {
   padding: var(--padding-top-bottom) 0;
 }
 
-.title {
-  margin: 0;
-  padding: 0;
-
-  font-weight: normal;
-  font-size: var(--font-size-h2);
-  line-height: 66px;
-}
-
 .flex {
   display: flex;
 }
 
-/* Блок Header */
+.jc-sb {
+  justify-content: space-between;
+}
 
-header {
-  overflow-x: hidden;
+.reverse {
+  flex-direction: row-reverse;
 }
 
 header::before,
@@ -84,9 +76,7 @@ header::before,
   left: 0;
   z-index: -10;
 
-  background: url(../images/background.png);
-  background-repeat: no-repeat;
-  background-position: center center;
+  background: url(../images/background.png) no-repeat center center;
   background-size: cover;
 
   opacity: 0.1;
@@ -114,15 +104,27 @@ header::after,
 }
 
 .background-white {
-  background-color: var(-var(--white-color));
+  background-color: var(--white-color);
 }
 
 .background-brown {
   background-color: var(--brown-color);
 }
 
-.font-orange {
+.orange-color {
   color: var(--orange-color);
+}
+
+.white-color {
+  color: var(--white-color);
+}
+
+.grey-color {
+  color: var(--translucent-dark-color);
+}
+
+.blue-color {
+  color: var(--blue-color);
 }
 
 .font-neucha {
@@ -133,9 +135,23 @@ header::after,
   font-family: var(--font-open-sans);
 }
 
+.title {
+  margin: 0;
+  padding: 0;
+
+  font-weight: normal;
+  font-size: var(--font-size-h2);
+  line-height: 66px;
+}
+
 .title-h1 {
   font-size: var(--font-size-h1);
   line-height: var(--line-height-title);
+}
+
+.title-h3 {
+  font-size: var(--font-size-h3);
+  line-height: 41px;
 }
 
 .relative {
@@ -148,6 +164,56 @@ header::after,
 
 .z-index-10 {
   z-index: 10;
+}
+
+.fz-14 {
+  font-size: 14px;
+}
+
+.mt-14rem {
+  margin-top: 14rem;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.pb-38 {
+  padding-bottom: 38px;
+}
+
+.ml-31 {
+  margin-left: 31px;
+}
+
+.fz-24 {
+  font-size: 24px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.mh-348 {
+  min-height: 348px;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  width: 100%;
+}
+
+/* Блок Header */
+
+header {
+  overflow-x: hidden;
 }
 
 .header img {
@@ -163,10 +229,6 @@ header::after,
 .text-block .left-block,
 .text-block .right-block {
   max-width: 33.75rem;
-}
-
-.mt-14rem {
-  margin-top: 14rem;
 }
 
 .text-block-one-column {
@@ -232,14 +294,13 @@ header::after,
 
   color: var(--dark-text-color);
 
-  line-height: 25.6px;
+  line-height: 26px;
   text-align: center;
 }
 
 .video {
   display: block;
-  margin: 0 auto;
-  margin-top: 35px;
+  margin: 35px auto 0;
 }
 
 .box-shadow {
@@ -256,9 +317,8 @@ header::after,
 
 .five-cognitives h2 {
   color: var(--white-color);
-  font-weight: normal;
   font-size: 52px;
-  line-height: 62.4px;
+  line-height: 62px;
 }
 
 .menu {
@@ -272,10 +332,6 @@ header::after,
   width: 350px;
 }
 
-.mb-20 {
-  margin-bottom: 20px;
-}
-
 .item-link {
   padding: 24px 24px 0 24px;
 
@@ -285,10 +341,6 @@ header::after,
   cursor: pointer;
 
   transition: all 0.2s ease;
-}
-
-.pb-38 {
-  padding-bottom: 38px;
 }
 
 .item-description {
@@ -306,11 +358,6 @@ header::after,
   line-height: 1;
 }
 
-.title-h3 {
-  font-size: var(--font-size-h3);
-  line-height: 40.8px;
-}
-
 .item-link:hover {
   background-color: var(--orange-color);
 }
@@ -325,10 +372,6 @@ header::after,
 
 /* Блок когнитивных искажений */
 
-.jc-sb {
-  justify-content: space-between;
-}
-
 .how-it-works {
   margin-top: 100px;
   margin-bottom: 20px;
@@ -336,8 +379,7 @@ header::after,
 
   color: var(--white-color);
   font-weight: 700;
-  font-size: 14px;
-  line-height: 22.4px;
+  line-height: 22px;
   text-transform: uppercase;
 
   background-color: var(--brown-color);
@@ -347,44 +389,6 @@ header::after,
   color: var(--main-dark-color);
 
   background-color: var(--white-color);
-}
-
-.ml-31 {
-  margin-left: 31px;
-}
-
-.grey-color {
-  color: var(--translucent-dark-color);
-}
-
-.fz-24 {
-  font-size: 24px;
-}
-
-.title-block h2 {
-  margin-top: 8px;
-}
-
-.title-block h3 {
-  margin-top: 24px;
-}
-
-.reverse {
-  flex-direction: row-reverse;
-}
-
-.optimization h2,
-.optimization h3,
-.optimization .text-block,
-.optimization .title-block > p {
-  color: var(--white-color);
-}
-
-.depreciation h2,
-.depreciation h3,
-.depreciation .text-block,
-.depreciation .title-block > p {
-  color: var(--white-color);
 }
 
 /* Блок subscription */
@@ -399,27 +403,22 @@ header::after,
   background-color: var(--main-dark-color);
 }
 
-.subscription h4 {
-  font-weight: 400;
-  font-size: var(--fonr-size-h4);
-  line-height: 43.2px;
+.subscription h2 {
+  font-size: var(--font-size-h4);
+  line-height: 43px;
 }
 
 .subscription label {
   display: block;
 
   font-weight: 700;
-  line-height: 28.8px;
-}
-
-.subscription a {
-  color: var(--white-color);
+  line-height: 29px;
 }
 
 .form-block .text {
   font-weight: normal;
   font-size: 12px;
-  line-height: 19.2px;
+  line-height: 19px;
 }
 
 input[type="mail"] {
@@ -435,9 +434,9 @@ input[type="mail"] {
 
 input[type="mail"]::placeholder {
 
-  color: var(-black-color);
+  color: var(--black-color);
   font-size: 18px;
-  line-height: 28.8px;
+  line-height: 29px;
 
   opacity: 0.2;
 }
@@ -495,13 +494,8 @@ input[type="submit"]:hover {
   margin-top: 60px;
 
   color: var(--black-color);
-  font-size: 14px;
-  line-height: 22.4px;
+  line-height: 22px;
   text-align: center;
-}
-
-.signature a {
-  color: var(--blue-color);
 }
 
 .author,
