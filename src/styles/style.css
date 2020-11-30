@@ -198,59 +198,73 @@ header::after,
   margin-top: 24px;
 }
 
+.mt-30 {
+  margin-top: 30px;
+}
+
 .mh-348 {
   min-height: 348px;
 }
 
 .row {
   display: flex;
+  overflow: hidden;
 }
 
-.col {
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.box-s-bb {
+  box-sizing: border-box;
+}
+
+.col-m {
+  flex-basis: 540px;
+  width: 540px;
+}
+
+.pr-31 {
+  padding-right: 31px;
+}
+
+.col-max {
   width: 100%;
 }
 
-/* Блок Header */
-
-header {
-  overflow-x: hidden;
+.pd-l-31 {
+  padding-left: 31px;
 }
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-shrink-999 {
+  flex-shrink: 999;
+}
+
+.height-150 {
+  height: 150px;
+}
+
+.height-405 {
+  height: 405px;
+}
+
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-grow-999 {
+  flex-grow: 999;
+}
+
+/* Block Header */
 
 .header img {
   top: 55px;
   right: -270px;
-}
-
-.text-block {
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.text-block .left-block,
-.text-block .right-block {
-  max-width: 33.75rem;
-}
-
-.text-block-one-column {
-  overflow: hidden;
-  height: 154px;
-}
-
-.text-block-one-column .one {
-  height: 154px;
-  flex-basis: 33.75rem;
-  flex-grow: 1;
-}
-
-.text-block-one-column .second {
-  margin-left: 20px;
-  height: 154px;
-  flex-basis: 33.75rem;
-  flex-grow: 999;
-}
-
-.right-block p:nth-child(2) {
-  margin-top: 1.875rem;
 }
 
 .link {
@@ -274,7 +288,7 @@ header {
   background-color: #ea7600;
 }
 
-.right-block .link {
+.link-header {
   justify-self: start;
   margin-top: 2.375rem;
 }
@@ -307,7 +321,7 @@ header {
   filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
 }
 
-/* Блок Five-cognitives */
+/* Block Five-cognitives */
 
 .five-cognitives {
   padding-top: 100px;
@@ -370,7 +384,7 @@ header {
   transition: all 0.2s ease;
 }
 
-/* Блок когнитивных искажений */
+/* Block of cognitive bias  */
 
 .how-it-works {
   margin-top: 100px;
@@ -391,7 +405,7 @@ header {
   background-color: var(--white-color);
 }
 
-/* Блок subscription */
+/* Block subscription */
 
 .subscription {
   display: flex;
