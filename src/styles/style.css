@@ -248,14 +248,6 @@ header::after,
   flex-shrink: 999;
 }
 
-.height-150 {
-  height: 150px;
-}
-
-.height-405 {
-  height: 405px;
-}
-
 .flex-grow-0 {
   flex-grow: 0;
 }
