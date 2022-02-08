@@ -517,3 +517,7 @@ input[type="submit"]:hover {
 .material {
   margin-bottom: 16px;
 }
+
+.depreciation {
+  background-color: #ea7600;
+}
