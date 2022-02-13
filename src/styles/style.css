@@ -103,8 +103,8 @@ header::after,
   content: '';
 }
 
-.background-white {
-  background-color: var(--white-color);
+.background-blue {
+  background-color: var(--blue-color);
 }
 
 .background-brown {
@@ -516,4 +516,8 @@ input[type="submit"]:hover {
 .author,
 .material {
   margin-bottom: 16px;
+}
+
+.depreciation {
+  background-color: #ea7600;
 }
